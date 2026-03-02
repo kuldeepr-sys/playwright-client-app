@@ -147,3 +147,128 @@ It simulates a real customer purchasing a product and verifies that the order is
 * Handled dynamic dropdowns and product loops
 
 ---
+
+## 🔎 How to Verify This Project
+
+Anyone can verify this automation framework in two ways:
+
+---
+
+## 🖥 Option 1: Run Tests Locally
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
+
+### Step 2: Install Dependencies
+
+```bash
+npm install
+```
+
+### Step 3: Install Playwright Browsers
+
+```bash
+npx playwright install
+```
+
+### Step 4: Run Tests
+
+```bash
+npx playwright test
+```
+
+If all tests pass, you will see:
+
+```
+1 passed
+```
+
+### Step 5: View HTML Report
+
+```bash
+npx playwright show-report
+```
+
+This opens a detailed test report with:
+
+* Execution steps
+* Screenshots
+* Logs
+* Pass/Fail status
+
+---
+
+## 🔄 Option 2: Verify Through CI (Jenkins)
+
+This project is integrated with Jenkins CI.
+
+### How CI Validation Works:
+
+1. Make any change in the code.
+2. Commit and push to the `main` branch.
+3. Jenkins automatically triggers the pipeline.
+4. Playwright tests run automatically.
+
+If tests pass:
+
+* Build status shows SUCCESS ✅
+
+If tests fail:
+
+* Build status shows FAILURE ❌
+* Deployment is blocked.
+
+---
+
+## 🧪 How to Intentionally Test Failure (For Learning)
+
+To verify CI blocking behavior:
+
+1. Modify any locator in the test (for example, change a product name).
+2. Push the changes.
+3. Jenkins pipeline will run automatically.
+4. The test will fail.
+5. Build status will show FAILED.
+
+This demonstrates that the automation prevents unstable code from being deployed.
+
+---
+
+# 🧠 Why This Section Is Important
+
+When someone checks your repo, they should be able to:
+
+* Run it themselves
+* See CI working
+* Understand the automation purpose
+* Experiment safely
+
+This shows maturity in your project.
+
+---
+
+# 💡 Optional (Very Professional Touch)
+
+You can also add:
+
+### 🟢 Live CI Status
+
+If you are using:
+
+* GitHub Actions → add build badge
+* Jenkins → add build status screenshot
+
+Example:
+
+```
+Build Status: Passing
+Automation: Enabled
+CI: Active
+```
+
+---
+
